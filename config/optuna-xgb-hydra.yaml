@@ -1,0 +1,25 @@
+
+xgb:
+  verbosity: 0
+  objective: "binary:logistic"
+  tree_method: "exact"
+  booster: ["gbtree","gblinear","dart"]
+  lambda:
+      name: "lambda"
+      min : 1e-8
+      max : 1.0
+      log : True
+  alpha:
+      name: alpha
+      min : 1e-8
+      max : 1.0
+      log : "True"
+  subsample:
+      name: subsample
+      min :  0.2
+      max : 1.0
+  colsample_bytree:
+      name: colsample_bytree
+      min :  0.2
+      max : 1.0
+

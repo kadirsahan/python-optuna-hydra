@@ -1,0 +1,25 @@
+brew install libomp
+
+
+# return nothing from hydra function , not supported
+
+following approach is recommended by owner , https://github.com/facebookresearch/hydra/issues/407
+
+def train(cfg):
+  ...
+
+def test(cfg):
+  ...
+
+@hydra.main(config_path="config_hydra/config.yaml")
+def my_app(cfg : DictConfig) -> DictConfig:
+  if cfg.action == "train":
+    train(cfg)
+  elif cfg.action == "test":
+    test(cfg)
+  
+if __name__ == "__main__":
+  my_app()
+
+
+  python optuna-hydra-sweeper.py --multirun 

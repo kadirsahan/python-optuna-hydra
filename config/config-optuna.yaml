@@ -1,0 +1,3 @@
+# optuna hydra basic config
+optuna:
+  trials: 10

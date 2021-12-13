@@ -1,0 +1,8 @@
+optuna
+xgboost
+sklearn
+hydra
+hydra-optuna-sweeper
+dependency_injector
+pyyaml
+dependency-injector[yaml]
